@@ -1,0 +1,69 @@
+/* styles.css */
+
+body {
+    font-family:  "Times New Roman", Times, serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background-color: #d7b8dc;
+}
+
+.products-container {
+    display: flex;
+    gap: 80px; /* Add space between the product items */
+}
+
+.product {
+    padding: 10px;
+    cursor: pointer;
+    width: 200px; /* Set a fixed width for each product container */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add border-radius for a rounded look */
+}
+.product:hover p {
+    opacity: 1; 
+}
+
+.product-details .text-container {
+    text-align: left;
+    width: 400px; /* Set the desired width for the rectangular space */
+    height: 200px; /* Set the desired height for the rectangular space */
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border for better visualization */
+    overflow: auto; /* Enable overflow to add a scrollbar if the content exceeds the height */
+}
+
+.product-details .text-container h2 {
+    margin-top: 0;
+}
+
+.product-details .text-container p {
+    margin-bottom: 20px;
+}
+
+.back-to-main-top,
+.back-to-main-bottom {
+    text-align: left;
+    margin: 20px; /* Adjust the margin as needed */
+}
+
+.back-to-main a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.back-to-main a:hover {
+    color: #555;
+}
+
+.reviews {
+    margin-top: 29px;
+}

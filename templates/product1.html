@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 1 Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="back-to-main">
+        <a href="/">Back to Main Page</a>
+    </div>
+
+
+    <div class="product-details">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='product3.png') }}" alt="Product 1 Image" style="width: 400px;">
+        </div>
+        <div class="text-container">
+            <h2>Sukuna's Scarlet Tempest</h2>
+            <p>Introducing "Sukuna's Scarlet Tempest" – an exhilarating and audacious
+                drink inspired by the formidable Cursed Spirit, Ryomen Sukuna, from
+                Jujutsu Kaisen. This vibrant concoction channels Sukuna's commanding
+                presence and intense energy with a twist of enticing strawberry
+                flavor.</p>
+        </div>
+    </div>
+    
+    <div class="user-rating-form">
+        <h3>Rate and Review this product:</h3>
+        <!-- Include the product_id in the form data -->
+<form action="{{ url_for('submit_review', product_id=1, product_name='Sukuna Scarlet Tempest') }}" method="post">
+    <!-- Your existing form fields -->
+    <label for="username">Your Name:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+    <label for="review">Review:</label>
+    <textarea id="review" name="review" required></textarea>
+
+    <!-- Add hidden input for product_id -->
+    <input type="hidden" name="product_id" value="1">
+
+    <!-- Add hidden input for product_name -->
+    <input type="hidden" name="product_name" value="Sukuna Scarlet Tempest">
+
+    <button type="submit">Submit Review</button>
+</form>
+
+
+    </div>
+
+
+
+
+</body>
+</html>

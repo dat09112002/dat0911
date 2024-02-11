@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 1 Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="back-to-main">
+        <a href="/">Back to Main Page</a>
+    </div>
+
+    
+    <div class="product-details">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='product2.png') }}" alt="Product 1 Image" style="width: 400px;">
+        </div>
+        <div class="text-container">
+            <h2>Gojo's Blueberry Bliss</h2>
+            <p>Introducing "Gojo's Blueberry Bliss" – a delicious drink inspired by
+                Gojo Satoru's amazing powers, including the cool-sounding "Infinity
+                Void" move. With every sip of this blueberry-flavored elixir, you're
+                not just enjoying a tasty drink but also unlocking Gojo's special
+                abilities like Red, Blue, Purple, and the super cool Infinity Void.</p>
+        </div>
+    </div>
+
+    <div class="user-rating-form">
+        <h3>Rate and Review this product:</h3>
+        <form action="{{ url_for('submit_review', product_id=3, product_name='Gojo Blueberry Bliss') }}" method="post">
+            <!-- Your existing form fields -->
+            <label for="username">Your Name:</label>
+            <input type="text" id="username" name="username" required>
+        
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" required></textarea>
+        
+            <!-- Add hidden input for product_id -->
+            <input type="hidden" name="product_id" value="3">
+        
+            <!-- Add hidden input for product_name -->
+            <input type="hidden" name="product_name" value="Gojo Blueberry Bliss">
+        
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+</body>
+</html>

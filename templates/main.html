@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="products-container">
+        <div class="product" onclick="navigateTo('/product1')">
+            <img src="{{ url_for('static', filename='product3.png') }}" alt="Product 1 ">
+            <p>Sukuna's Scarlet Tempest</p>
+        </div>
+    
+
+        <div class="product" onclick="navigateTo('/product2')">
+            <img src="{{ url_for('static', filename='product1.png') }}" alt="Product 2 ">
+            <p>Nanami's Pineapple Elegance</p>
+        </div>
+
+        <div class="product" onclick="navigateTo('/product3')">
+            <img src="{{ url_for('static', filename='product2.png') }}" alt="Product 3 ">
+            <p>Gojo's Blueberry Bliss </p>
+        </div>
+
+        <div class="product" onclick="navigateTo('/allreviews')">
+            <p>See All Reviews</p>
+        </div>
+        
+    </div>
+
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
